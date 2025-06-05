@@ -1,0 +1,64 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+}
+
+.main-content {
+  margin-top: 20px;     
+}
+
+.sidebar {
+  background-color: #2f2f2f;
+  min-width: 220px;
+  min-height: 100vh;
+}
+
+.icon-placeholder {
+  background: #2f2f2f;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+}
+
+.calendar-grid .header {
+  font-weight: bold;
+  background: transparent;
+}
+
+.meeting-box {
+  background: #ffe5b4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #d69e00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Give consistent left margin */
+.main-content {
+  flex: 1;
+  margin-left: 30px;
+  margin-top: 20px;
+}

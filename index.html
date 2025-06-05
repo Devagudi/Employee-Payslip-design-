@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #fde2e2, #fcd4b2);
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    .left img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      max-width: 400px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #111;
+      font-weight: 600;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .input-group-custom {
+      display: flex;
+      align-items: center;
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: white;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .input-group-custom span {
+      font-size: 1.2rem;
+    }
+
+    .input-group-custom input {
+      border: none;
+      outline: none;
+      width: 100%;
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .forgot {
+      text-align: right;
+      margin-bottom: 25px;
+    }
+
+    .forgot a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    button {
+      padding: 15px;
+      border: none;
+      background: #ffc107;
+      color: black;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #e6ac00;
+    }
+
+    @media (min-width: 768px) {
+      .form-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px; 
+      }
+
+      .left, .right {
+        flex: 0 0 30%; 
+        max-width: 30%;
+      }
+
+      .right {
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row min-vh-100 align-items-center justify-content-center form-area">
+      <div class="left text-center">
+        <img src="loginLogo.gif" alt="Login" class="img-fluid rounded-circle" />
+      </div>
+      <div class="right">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group-custom">
+            <span>📧</span>
+            <input type="text" placeholder="Enter your Name" id="username" required />
+          </div>
+          <div class="input-group-custom">
+            <span>🔒</span>
+            <input type="password" placeholder="Password" id="password" required />
+            <span class="toggle-password" onclick="togglePassword()">🙈</span>
+          </div>
+          <div class="forgot">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.querySelector('.toggle-password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.textContent = '👁️';
+      } else {
+        passwordInput.type = 'password';
+        toggleIcon.textContent = '🙈';
+      }
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!username || !password) {
+        alert("Please fill in all fields");
+      } else {
+        alert("Login successful");
+        window.location.replace("Employee%20Dashboard.html")
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

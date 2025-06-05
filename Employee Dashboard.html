@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="./Employee Dashboard.css" />
+ 
+</head>
+<body>
+  <div class="d-flex flex-column flex-md-row min-vh-100">
+    
+    <div class="sidebar p-4 text-white bg-dark" style="width: 220px;">
+      <ul class="list-unstyled">
+        <li class="mb-4"><strong><img src="Overview.png" alt="Overview" class="me-2">Overview</strong></li>
+      <li class="mb-3">
+  <a href="Payroll.html" class="text-white text-decoration-none d-flex align-items-center">
+    <img src="Payroll.png" alt="Payroll" class="me-3"> <strong>Payroll</strong>
+  </a>
+</li>
+        <li class="mb-3">
+  <a href="Payslip.html" class="text-white text-decoration-none d-flex align-items-center">
+    <img src="Payroll.png" alt="Payslip" class="me-3"> <strong>Payslip</strong>
+  </a>
+</li>
+    </div>
+
+    <div class="flex-fill bg-light">
+      <div class="container px-4 py-4">
+        
+        <div class="topbar d-flex justify-content-between align-items-center p-3 bg-warning-subtle mb-4">
+          <h5 class="mb-0">Good Morning !!!</h5>
+          <div class="d-flex align-items-center gap-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search                         🔍">
+            </div>
+            <span class="position-relative">
+              <img src="notification.png" alt="notification">
+            </span>
+            <img src="Profile.png" alt="user" class="rounded-circle" width="40" height="40">
+          </div>
+        </div>
+      
+        <div class="p-4 rounded shadow-sm mb-4" style="background-color: #fff7d1;">
+
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-3">
+            <div class="p-3 bg-warning text-center rounded shadow-sm">
+              <div class="icon-placeholder mb-2">👥</div>
+              <strong>Total Employees</strong>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 bg-warning text-center rounded shadow-sm">
+              <div class="icon-placeholder mb-2">👤</div>
+              <strong>Number Of leave</strong>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 bg-warning text-center rounded shadow-sm">
+              <div class="icon-placeholder mb-2">➕</div>
+              <strong>New Employee’s</strong>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 bg-warning text-center rounded shadow-sm">
+              <div class="icon-placeholder mb-2">✈️</div>
+              <strong>Holiday of this Year</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6 mb-4">
+            <h5>Calendar</h5>
+            <div class="bg-warning-subtle p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <strong id="monthYear"></strong>
+                <div>
+                  <button class="btn btn-sm btn-outline-dark me-1" id="prevMonth">&lt;</button>
+                  <button class="btn btn-sm btn-outline-dark" id="nextMonth">&gt;</button>
+                </div>
+              </div>
+              <div id="calendar" class="calendar-grid"></div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5>Upcoming Meetings</h5>
+              <a href="#" class="text-danger">View All</a>
+            </div>
+            <div class="bg-warning-subtle p-3 rounded shadow-sm">
+              <div class="meeting-box">Client Meeting - 10.00 Am <span>Mon<br><small>Jun 9</small></span></div>
+              <div class="meeting-box">Team Meeting - 11.00 Am <span>Mon<br><small>Jun 9</small></span></div>
+              <div class="meeting-box">HR Interview - 2.00 Pm <span>Mon<br><small>Jun 9</small></span></div>
+              <div class="meeting-box">Client Meeting - 4.00 Pm <span>Mon<br><small>Jun 9</small></span></div>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+    </div> 
+  </div> 
+ 
+
+  <script src="./Employee Dashboard.js"></script>
+</body>
+</html>
